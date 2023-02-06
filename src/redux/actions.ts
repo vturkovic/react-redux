@@ -1,3 +1,5 @@
+export const REGISTER_USER = 'REGISTER_USER';
+
 interface RegisterUserAction {
   type: typeof REGISTER_USER;
   payload: {
@@ -14,8 +16,6 @@ interface State {
     password: string;
   }>;
 }
-
-export const REGISTER_USER = 'REGISTER_USER';
 
 const initialState: State = {
   users: [],
