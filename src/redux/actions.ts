@@ -1,27 +1,10 @@
-export const REGISTER_USER = 'REGISTER_USER';
+import {REGISTER_USER, StateInterface, RegisterUserActionInterface } from '../interfaces';
 
-interface RegisterUserAction {
-  type: typeof REGISTER_USER;
-  payload: {
-    username: string;
-    email: string;
-    password: string;
-  };
-}
-
-interface State {
-  users: Array<{
-    username: string;
-    email: string;
-    password: string;
-  }>;
-}
-
-const initialState: State = {
+const initialState: StateInterface = {
   users: [],
 };
 
-export function registerUser(userData: { username: string; email: string; password: string }): RegisterUserAction {
+export function registerUser(userData: { username: string; email: string; password: string }): RegisterUserActionInterface {
   return {
     type: REGISTER_USER,
     payload: userData,
